@@ -9,18 +9,17 @@ fetch('https://randomuser.me/api/?results=12')
     response.json().then(function(data){
       // console.log(data.results[0].name.first);
       let name = data.results;
-      console.log(name);
-      console.log('The fucking first name is ' + name);
 
       var peoples = data.results;
-      console.log(peoples);
+      // console.log(peoples);
 
       function renderPeoples() {
         return `
         ${peoples.map(peoples =>`
-          <ul>
-          <li>${peoples.name.first}</li>
-          <li>${peoples.picture.medium}</li>
+
+          <ul id='peopleUl'>
+
+          <li><img src="${peoples.picture.large}"></li>
           <li>${peoples.name.first} ${peoples.name.last} </li>
           <li>${peoples.email}</li>
           <li>${peoples.location.street}</li>
