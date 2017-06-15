@@ -2,9 +2,44 @@
     font-family: PT sans;
 }
 
-.customers {
+.peoples {
+  display: flex; 
+  flex-wrap: wrap; 
+    
+}
+ul {
+  list-style: none;
+  text-align: center;
+  margin: 0; 
+padding: 0;     
+    padding:10px;
+    box-sizing: border-box;
+}
+img {
+    width: 100%;
+}
+.name {
+ width: 25%; 
 
 }
-#peopleUl {
-  list-style: none;
+
+#person {
+    text-decoration: underline;
+    text-transform: uppercase;
+    justify-content: space-around;
+    
+}
+.address {
+    text-transform: capitalize;
+      
+}
+#identification {
+    color: transparent; 
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+    
+}
+h1 {
+    align-content: center;
+    padding-left: 33%;     
+    
 }

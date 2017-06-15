@@ -15,24 +15,30 @@ fetch('https://randomuser.me/api/?results=12')
 
       function renderPeoples() {
         return `
-        ${peoples.map(peoples =>`
+        ${peoples.map(people =>`
 
-          <ul id='peopleUl'>
-
-          <li><img src="${peoples.picture.large}"></li>
-          <li>${peoples.name.first} ${peoples.name.last} </li>
-          <li>${peoples.email}</li>
-          <li>${peoples.location.street}</li>
-          <li>${peoples.location.city} ${peoples.location.state} ${peoples.location.postcode}</li>
-          <li>${peoples.phone}</li>
+        <div class='name'>
+          <ul>
+          <li><img src="${people.picture.large}"></li>
+          <li id = 'person'>${people.name.first} ${people.name.last} </li>
+          <li>${people.email}</li>
+          <li class = 'address'>${people.location.street}</li>
+          <li class = 'address'>${people.location.city} ${people.location.state} ${people.location.postcode}</li>
+          <li>${people.phone}</li>
           <br>
-          <li>${peoples.id.name} ${peoples.id.value}</li>`).join('')}
-            </ul>`;
+          <li id = 'identification'>${people.id.name} ${people.id.value}</li>           
+          </ul>
+          </div>
+          `).join('')}
+        `
+                    
         }
 
           let test1 = `
-            <div class="info">
-           <p>Name ${renderPeoples()}</p>
+            <h1> Internal Company Directory</h1>
+            <div class="peoples">
+            
+           <p>${renderPeoples()}</p>
            </div>`
 
     document.body.innerHTML = test1;
